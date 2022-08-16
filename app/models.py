@@ -19,3 +19,17 @@ class Post(db.Model):
 
     def __repr__(self):
         return '<Post {}>'.format(self.body)
+
+class Roffle(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    fifa_name = db.Column(db.String(140))
+    fifa_skill = db.Column(db.String(140))
+
+
+    def __repr__(self):
+        return '<Roffle {}>'.format(self.fifa_name)
+
+class Fellas(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    fella_name = db.Column(db.String(140))
+    fella_location = db.Column(db.String(140))
